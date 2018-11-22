@@ -13,6 +13,7 @@
 		88159C7F21A6927800C2C4CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88159C7E21A6927800C2C4CC /* Assets.xcassets */; };
 		88159C8221A6927800C2C4CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88159C8021A6927800C2C4CC /* LaunchScreen.storyboard */; };
 		88159C8A21A6937C00C2C4CC /* download.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 88159C8921A6937C00C2C4CC /* download.jpg */; };
+		88159C8C21A6CB5000C2C4CC /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88159C8B21A6CB5000C2C4CC /* ViewController2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		88159C8121A6927800C2C4CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		88159C8321A6927800C2C4CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88159C8921A6937C00C2C4CC /* download.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = download.jpg; sourceTree = "<group>"; };
+		88159C8B21A6CB5000C2C4CC /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				88159C7721A6927600C2C4CC /* AppDelegate.swift */,
 				88159C7921A6927600C2C4CC /* ViewController.swift */,
+				88159C8B21A6CB5000C2C4CC /* ViewController2.swift */,
 				88159C7B21A6927600C2C4CC /* Main.storyboard */,
 				88159C7E21A6927800C2C4CC /* Assets.xcassets */,
 				88159C8921A6937C00C2C4CC /* download.jpg */,
@@ -141,6 +144,7 @@
 			files = (
 				88159C7A21A6927600C2C4CC /* ViewController.swift in Sources */,
 				88159C7821A6927600C2C4CC /* AppDelegate.swift in Sources */,
+				88159C8C21A6CB5000C2C4CC /* ViewController2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

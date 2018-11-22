@@ -14,7 +14,7 @@ class BasicDrawingViewController: UIViewController {
     var firstPoint = CGPoint.zero
     var paintColor : UIColor = UIColor.yellow
     var lineWidth : CGFloat = 30
-    
+    var png :Data?
     @IBOutlet weak var mainImage: UIImageView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var oterimage: UIImageView!
@@ -38,6 +38,36 @@ class BasicDrawingViewController: UIViewController {
     @IBAction func rest(_ sender: UIButton) {
         imageView.image = nil
         oterimage.mask = imageView
+    }
+    @IBAction func save(_ sender: Any) {
+       
+       var image = takeScreenshot()
+       png = image?.pngData()
+        mainImage.image = UIImage(data: png!)
+        print(mainImage.image?.size)
+    }
+    func takeScreenshot() -> UIImage? {
+        
+        // Begin context
+     //   UIGraphicsBeginImageContextWithOptions(oterimage.bounds.size, false, UIScreen.mainScreen().scale)
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: 512, height: 512), false, 1)
+        // Draw view in that context
+        //drawViewHierarchyInRect(self.bounds, afterScreenUpdates: true)
+        oterimage.drawHierarchy(in: oterimage.bounds, afterScreenUpdates: false)
+        // And finally, get image
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return image
+    }
+    
+    
+    @IBAction func share(_ sender: UIButton) {
+        let activityItem: [AnyObject] = [png as! AnyObject]
+        
+        let avc = UIActivityViewController(activityItems: activityItem as [AnyObject], applicationActivities: nil)
+        
+        self.present(avc, animated: true, completion: nil)
     }
     
 }
